@@ -4,25 +4,15 @@
 
 ### Preparation and Lesson Overview
 
-Ensure you have conda setup. Please do:
+Ensure you have conda setup. Create the conda environment based on the `kafka-environment.yml` file in the [environment folder](https://github.com/su-ntu-ctp/5m-data-2.1-intro-big-data-eng/tree/main/environments).
 
-```
-conda env update -f environment.yml
-```
-
-This should install the `kafka` conda environment. You can activate it via:
+You can activate it via:
 
 ```
 conda activate kafka
 ```
 
-Lastly, one more step to install the packages:
-
-```
-pip install -r requirements.txt
-```
-
-Also, we need to host kafka locally via docker.
+Next, we need to host kafka locally via docker.
 
 The learner is first requested to install docker via this link before running the below commands: 
 - Windows users: https://docs.docker.com/desktop/setup/install/windows-install/
@@ -33,6 +23,10 @@ The learner is first requested to install docker via this link before running th
 After installation, please start docker desktop by searching for `docker` in Windows/Mac, and double-clicking on the application. After docker desktop has started, you will be able to see this:
 
 ![Docker Desktop](./assets/docker_desktop.png)
+
+Find the `>_` sign below to open a terminal inside docker.
+
+> WSL user please note that in this case your docker runs on powershell. This is alright as wsl can communicate with Windows docker via network 
 
 When you run the below `docker run` command, the kafka image will first be downloaded onto your machine, if it is not already there. 
 
